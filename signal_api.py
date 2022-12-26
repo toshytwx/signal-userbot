@@ -87,7 +87,8 @@ class Message:
         self.sender_number = data["sourceNumber"]
         self.sender_name = data["sourceName"]
         self.text = data["dataMessage"]["message"]
-
+        self.data = data
+        
         if "groupInfo" in data["dataMessage"]:
             self.is_group = True
             self.group_internal_id = data["dataMessage"]["groupInfo"]["groupId"]
